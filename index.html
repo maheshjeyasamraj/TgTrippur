@@ -189,88 +189,100 @@
       background-color: #333;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .top-bar {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-      }
 
-      .social-icons {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 12px;
-      }
 
-      .location {
-        font-size: 13px;
-        text-align: right;
-      }
 
-      .navbar {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-      }
 
-      .navbar .logo {
-        margin-bottom: 0;
-      }
 
-      .menu-toggle {
-        display: block;
-      }
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
 
-      .navbar nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #fff;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 999;
-        padding: 10px 20px;
-        border-top: 1px solid #eee;
-      }
+  .social-icons {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 12px;
+  }
 
-      .navbar nav.active {
-        display: flex;
-      }
+  .location {
+    font-size: 13px;
+    text-align: right;
+  }
 
-      .navbar nav a {
-        padding: 10px 0;
-        width: 100%;
-        text-align: left;
-      }
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
 
-      .hero {
-        flex-direction: column;
-        height: auto;
-      }
+  .navbar .logo {
+    margin-bottom: 0;
+  }
 
-      .hero-image {
-        flex: 1 1 100%;
-        height: 300px;
-      }
+  .menu-toggle {
+    display: block;
+  }
 
-      .hero-content {
-        padding: 30px 20px;
-        justify-content: flex-start;
-      }
+  .navbar nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    border-top: 1px solid #eee;
+  }
 
-      .hero-text h1 {
-        font-size: 28px;
-      }
+  .navbar nav.active {
+    display: flex;
+  }
 
-      .hero-text button {
-        font-size: 14px;
-        padding: 10px 20px;
-      }
-    }
+  .navbar nav a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-image {
+    flex: 1 1 100%;
+    height: 300px;
+  }
+
+  .hero-content {
+    padding: 30px 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-text {
+    text-align: center; /* ✅ Center all text including button */
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text button {
+    display: inline-block; /* ✅ Prevents full-width stretching */
+    margin-top: 15px;      /* Adds spacing */
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
   </style>
 </head>
 
@@ -279,12 +291,11 @@
 <!-- Top Bar -->
 <div class="top-bar">
   <div class="social-icons">
-    <a href="https://www.instagram.com/essensuals.dharapuramroad?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/919361191133" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://share.google/qkMhymZqlkfMlibKi" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.instagram.com/essensualstiruppur/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/918144446446" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/essensualstiruppur/" target="_blank"><i class="fab fa-facebook-f"></i></a>
   </div>
-<a href="https://share.google/qkMhymZqlkfMlibKi" target="_blank" class="location">
+<a href="https://maps.app.goo.gl/vvUmPoXDyRmYv7aV7" target="_blank" class="location">
   TIRUPPUR, TAMILNADU
 </a>
 
@@ -292,10 +303,9 @@
 
 <!-- Navigation Bar -->
 <div class="navbar">
-  <div class="logo">
+  <div class="logo" onclick="scrollToTop()" style="cursor:pointer;">
     <img src="Logo.webp" alt="TONI&GUY" />
   </div>
-
   <button class="menu-toggle" id="menuToggle">
     <i class="fas fa-bars"></i>
   </button>
@@ -635,7 +645,7 @@
 
     .brand-visual {
       flex: 1 1 50%;
-      background: url('brand-bg.webp') no-repeat center center/cover;
+      background: url('brand-bg.gif') no-repeat center center/cover;
       min-height: 500px;
       border-radius: 12px;
       box-shadow:
@@ -712,16 +722,16 @@
     <div class="brand-text">
       <h2>Step into the World of Toni&Guy. Now in Tiruppur, Tamilnadu</h2>
       <p>
-        We bring world-class hairdressing and beauty services to your neighborhood<br>
+        We bring world-class hairdressing and beauty services to your neighborhood
         with the finesse and quality Toni&Guy is known for globally.
       </p>
       <p>
-        From haircuts to hair colour, smoothing to bridal services,<br>
+        From haircuts to hair colour, smoothing to bridal services,
         every detail is delivered with expertise and care.
       </p>
       <p class="highlight">We’re not just a salon! We’re an experience.</p>
       <p>
-        Our mission is to make every client walk out feeling confident,<br>
+        Our mission is to make every client walk out feeling confident,
         rejuvenated, and looking their absolute best.
       </p>
     </div>
@@ -950,60 +960,127 @@
 </section>
 
 
-
-<!-- 🌟 LUXURY MEMBERSHIP SECTION -->
+<!-- 🌟 BRIDAL PRICE LIST SECTION -->
 <section class="luxury-membership-section">
   <div class="lux-container">
     <div class="lux-header">
-      <h2>JOIN THE CLUB</h2>
-      <p>Premium Memberships Curated for Modern Elegance</p>
+      <h2>BRIDAL PACKAGES</h2>
+      <p>Exclusive Pre-Bridal & Groom Packages with Premium Styling</p>
     </div>
 
     <div class="lux-cards">
-      <!-- Platinum -->
+      <!-- Pre Bridegroom Premium -->
       <div class="lux-card glass">
-        <h3>💎 Platinum</h3>
-        <p class="price">₹50,000 <span>Value ₹70,000</span></p>
+        <h3>👑 Pre Bridegroom Package - Premium</h3>
+        <p class="price">₹3500</p>
         <ul>
-          <li>✔ Unlimited Hair Services</li>
-          <li>✔ Free Grooming Kit</li>
-          <li>✔ VIP Bookings</li>
+          <li>June Jacob / Sea Soul Facial</li>
+          <li>Shave</li>
+          <li>Deluxe Pedicure</li>
+          <li>Deluxe Manicure</li>
+          <li>Global Color / Hair Spa</li>
+          <li>Top Stylist Haircut & Styling</li>
         </ul>
-        <a href="https://wa.me/919361191133" target="_blank">Join Platinum</a>
       </div>
 
-      <!-- Gold -->
+      <!-- Pre Bridal Premium -->
       <div class="lux-card glass">
-        <h3>💎 Gold</h3>
-        <p class="price">₹30,000 <span>Value ₹45,000</span></p>
+        <h3>👑 Pre Bridal Package - Premium</h3>
+        <p class="price">₹5500</p>
         <ul>
-          <li>✔ 8 Premium Haircuts</li>
-          <li>✔ Priority Scheduling</li>
-          <li>✔ Spa Access</li>
+          <li>June Jacob / Sea Soul Facial</li>
+          <li>Full Body Waxing (Normal)</li>
+          <li>Threading</li>
+          <li>Deluxe Pedicure</li>
+          <li>Deluxe Manicure</li>
+          <li>Top Stylist Haircut & Blowdry</li>
+          <li>Body Polish / Hair Spa</li>
         </ul>
-        <a href="https://wa.me/919361191133" target="_blank">Join Gold</a>
       </div>
 
-      <!-- Silver -->
+      <!-- Pre Bridegroom Luxury -->
       <div class="lux-card glass">
-        <h3>💎 Silver</h3>
-        <p class="price">₹20,000 <span>Value ₹30,000</span></p>
+        <h3>💎 Pre Bridegroom Package - Luxury</h3>
+        <p class="price">₹5000</p>
         <ul>
-          <li>✔ 5 Signature Haircuts</li>
-          <li>✔ Grooming Essentials</li>
-          <li>✔ Expert Consultation</li>
+          <li>Dermalogica / Babor</li>
+          <li>Shave</li>
+          <li>Luxury Pedicure</li>
+          <li>Luxury Manicure</li>
+          <li>Global Color / Hair Spa</li>
+          <li>Creative Director Haircut & Styling</li>
+          <li>Luxury Body Polish / Protein Treatment</li>
         </ul>
-        <a href="https://wa.me/919361191133" target="_blank">Join Silver</a>
+      </div>
+
+      <!-- Pre Bridal Luxury -->
+      <div class="lux-card glass">
+        <h3>💎 Pre Bridal Package - Luxury</h3>
+        <p class="price">₹7000</p>
+        <ul>
+          <li>Dermalogica / Babor</li>
+          <li>Full Body Waxing (Add-on: Depilieve 1000)</li>
+          <li>Threading</li>
+          <li>Luxury Pedicure</li>
+          <li>Luxury Manicure</li>
+          <li>Creative Director Haircut & Blowdry</li>
+          <li>Luxury Body Polish / Hair Spa</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Makeup & Hair -->
+    <div class="lux-header" style="margin-top:80px;">
+      <h2>MAKEUP & HAIR STYLING</h2>
+      <p>Bridal, Groom & Bridesmaid Services</p>
+    </div>
+
+    <div class="lux-cards">
+      <div class="lux-card glass">
+        <h3>💄 Bridal Makeup</h3>
+        <ul>
+          <li>Eye Makeup – ₹600</li>
+          <li>Mini Makeup – ₹1500</li>
+          <li>Simple Makeup – ₹3000</li>
+        </ul>
+      </div>
+
+      <div class="lux-card glass">
+        <h3>👰 Bride (Hair, Makeup & Draping)</h3>
+        <ul>
+          <li>Elegant Bride – ₹8000</li>
+          <li>Gorgeous Bride – ₹10000</li>
+          <li>Glamorous Bride – ₹12000</li>
+          <li>Airbrush – ₹16000</li>
+        </ul>
+      </div>
+
+      <div class="lux-card glass">
+        <h3>👭 Bridesmaids</h3>
+        <ul>
+          <li>Saree Draping – ₹1500</li>
+          <li>Hair & Makeup – ₹4500</li>
+        </ul>
+      </div>
+
+      <div class="lux-card glass">
+        <h3>🤵 Groom (Hair & Makeup)</h3>
+        <ul>
+          <li>Normal – ₹4000</li>
+          <li>High Definition – ₹5000</li>
+        </ul>
       </div>
     </div>
 
     <div class="lux-note">
-      📌 Taxes extra. Terms & Conditions apply.
+      📌 Hair Extensions – By Consultation<br>
+      📌 Rs.2000 extra for any Outdoor Event<br>
+      📌 Government service taxes are applicable
     </div>
   </div>
 </section>
 
-<!-- ✅ LUXURY CSS -->
+<!-- ✅ CSS (reuse same as your membership section) -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap');
 
@@ -1013,124 +1090,57 @@
     font-family: 'Open Sans', sans-serif;
     color: #000;
   }
-
-  .lux-container {
-    max-width: 1300px;
-    margin: auto;
-    text-align: center;
-  }
-
+  .lux-container { max-width: 1300px; margin: auto; text-align: center; }
   .lux-header h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    letter-spacing: 1px;
+    font-size: 42px;
     margin-bottom: 10px;
     color: #111;
   }
-
-  .lux-header p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 60px;
-  }
-
+  .lux-header p { font-size: 18px; color: #666; margin-bottom: 50px; }
   .lux-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;
   }
-
   .lux-card {
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
     border: 1px solid #ccc;
     border-radius: 20px;
-    padding: 40px 30px;
-    width: 320px;
+    padding: 35px 25px;
+    width: 300px;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     text-align: left;
-    position: relative;
   }
-
   .lux-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
   }
-
   .lux-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 26px;
+    font-size: 22px;
     color: #000;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
-
   .lux-card .price {
     font-size: 20px;
     font-weight: bold;
     color: #000;
     margin-bottom: 15px;
   }
-
-  .lux-card .price span {
-    display: block;
-    font-size: 15px;
-    color: #666;
-    font-weight: 400;
-    margin-top: 3px;
-  }
-
-  .lux-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-
-  .lux-card ul li {
-    font-size: 15px;
-    margin-bottom: 10px;
-    color: #222;
-  }
-
-  .lux-card a {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #000;
-    color: #fff;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: background 0.3s ease;
-  }
-
-  .lux-card a:hover {
-    background: #333;
-  }
-
+  .lux-card ul { list-style: none; padding: 0; margin: 15px 0; }
+  .lux-card ul li { font-size: 15px; margin-bottom: 8px; color: #222; }
   .lux-note {
-    margin-top: 50px;
-    font-size: 13px;
+    margin-top: 60px;
+    font-size: 14px;
     color: #888;
     font-style: italic;
   }
-
   /* 📱 Responsive */
   @media (max-width: 768px) {
-    .lux-header h2 {
-      font-size: 32px;
-    }
-
-    .lux-header p {
-      font-size: 16px;
-      padding: 0 10px;
-    }
-
-    .lux-card {
-      width: 100%;
-      max-width: 90%;
-    }
+    .lux-header h2 { font-size: 28px; }
+    .lux-header p { font-size: 15px; }
+    .lux-card { width: 100%; max-width: 90%; }
   }
 </style>
 
@@ -1355,7 +1365,7 @@
       <!-- Image Block -->
       <div class="contact-card image-block animate-fade-up">
         <div class="image-overlay"></div>
-        <img src="your-image.webp" alt="Toni&Guy Studio" />
+        <img src="your-image.jpg" alt="Toni&Guy Studio" />
       </div>
 
     </div>
@@ -1380,7 +1390,6 @@
   </script>
 
 
-
 <!-- 🌐 LUXURY FOOTER SECTION -->
 <footer class="tg-footer" id="tgFooter">
   <div class="tg-footer-overlay"></div>
@@ -1389,19 +1398,24 @@
     <!-- Left -->
     <div class="tg-footer-left">
       <h2 class="tg-footer-brand">TONI&GUY <br><span> TIRUPPUR</span></h2>
-      <p><i class="fas fa-map-marker-alt"></i> <a href="https://share.google/ALayEatBJR5xuYXa4" target="_blank">Tiruppur, Tamilnadu</a></p>
-      <p><i class="fa-solid fa-phone"></i> <a href="tel:+919030015757">+91 93611 91133</a></p>
-
-      <p><i class="fas fa-envelope"></i> <a href="mailto:tellapur@toniandguy.in">tiruppur@toniandguy.in</a></p>
-      <p><i class="fas fa-clock"></i> 10:00 AM – 09:00 PM (All Days)</p>
+      <p><i class="fas fa-map-marker-alt"></i> 
+        <a href="https://maps.app.goo.gl/vvUmPoXDyRmYv7aV7" target="_blank">Tiruppur, Tamilnadu</a>
+      </p>
+      <p><i class="fa-solid fa-phone"></i> 
+        <a href="tel:+918144446446">+91 81 4444 6446</a>
+      </p>
+      <p><i class="fas fa-envelope"></i> 
+        <a href="mailto:tiruppur@toniandguy.com">tiruppur@toniandguy.com</a>
+      </p>
+      <p><i class="fas fa-clock"></i> 09:00 AM – 09:00 PM (All Days)</p>
     </div>
 
     <!-- Right -->
     <div class="tg-footer-right">
       <h3>Follow Us</h3>
       <div class="tg-socials">
-        <a href="https://www.instagram.com/essensuals.dharapuramroad?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.instagram.com/essensuals.dharapuramroad?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/essensuals.dharapuramroad" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/essensuals.dharapuramroad" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://share.google/qkMhymZqlkfMlibKi" target="_blank"><i class="fab fa-google"></i></a>
       </div>
       <p class="tg-copy">© 2025 Toni&Guy Tiruppur. All Rights Reserved.</p>
@@ -1409,9 +1423,6 @@
 
   </div>
 
-  <button id="scrollTopBtn" onclick="scrollToTop()" title="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
 </footer>
 
 <!-- 🌟 FOOTER STYLE -->
@@ -1502,13 +1513,13 @@
 
   .tg-socials {
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
     gap: 20px;
     flex-wrap: wrap;
   }
 
   .tg-socials a {
-    font-size: 22px;
+    font-size: 26px;
     color: #aaa;
     transition: all 0.3s ease;
   }
@@ -1565,7 +1576,8 @@
     }
 
     .tg-socials {
-      justify-content: center;
+      justify-content: center; /* Center icons on mobile */
+      gap: 25px;
     }
 
     #scrollTopBtn {
@@ -1595,7 +1607,7 @@
     }
 
     .tg-socials a {
-      font-size: 20px;
+      font-size: 24px;
     }
   }
 </style>
@@ -1625,7 +1637,7 @@
   footerObserver.observe(document.querySelector(".tg-footer-glass"));
 </script>
 
-<!-- ✅ FONT AWESOME (if not already loaded globally) -->
+<!-- ✅ FONT AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
@@ -1641,23 +1653,19 @@
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
       
-      <a href="tel:+919361191133" class="contact-link">
+      <a href="tel:+918144446446" class="contact-link">
         <i class="fas fa-phone"></i> Call Us
       </a>
 
-      <a href="mailto:essensuals.dharapuram@gmail.com" class="contact-link">
-        <i class="fas fa-envelope"></i> Email
-      </a>
-
-      <a href="https://share.google/qkMhymZqlkfMlibKi" target="_blank" class="contact-link">
+      <a href="https://maps.app.goo.gl/vvUmPoXDyRmYv7aV7" target="_blank" class="contact-link">
         <i class="fas fa-map-marker-alt"></i> Location
       </a>
 
-      <a href="https://www.instagram.com/essensuals.dharapuramroad?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="contact-link">
+      <a href="https://www.instagram.com/essensualstiruppur/" target="_blank" class="contact-link">
         <i class="fab fa-instagram"></i> Instagram
       </a>
 
-      <a href="https://www.instagram.com/essensuals.dharapuramroad?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="contact-link">
+      <a href="https://www.instagram.com/essensualstiruppur/" target="_blank" class="contact-link">
         <i class="fab fa-facebook"></i> Facebook
       </a>
 
